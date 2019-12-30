@@ -6,10 +6,10 @@ const BASE_URL = 'https://developer.mozilla.org';
 const MDN_JS_GLOBAL_OBJECTS_URL = `${BASE_URL}/zh-CN/docs/Web/JavaScript/Reference/Global_Objects`;
 
 async function loadHTML(url) {
-  // 每三秒调用一次  防止被拦截
-  console.log('3s后继续...');
+  // 每10秒调用一次  防止被拦截
+  console.log('15s后继续...');
   await new Promise(function(resolve) {
-    setTimeout(resolve, 3000)
+    setTimeout(resolve, 15000)
   })
   try {
     const res = await superagent.get(url);
