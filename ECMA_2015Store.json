@@ -1,1 +1,54 @@
-{}
+{
+  "Array": [
+    "from",
+    "isArray",
+    "every",
+    "filter",
+    "forEach",
+    "indexOf",
+    "Reduce",
+    "ReduceRight",
+    "some"
+  ],
+  "ArrayBuffer": [
+    "isView",
+    "slice"
+  ],
+  "AsyncFunction": [
+    "bind"
+  ],
+  "Atomics": [],
+  "BigInt": [],
+  "BigUint64Array": [
+    "set",
+    "subarray"
+  ],
+  "Boolean": [],
+  "DataView": [
+    "getFloat32",
+    "getFloat64",
+    "getInt16",
+    "getInt32",
+    "getInt8",
+    "getUint16",
+    "getUint32",
+    "getUint8",
+    "setFloat32",
+    "setFloat64",
+    "setInt16",
+    "setInt32",
+    "setInt8",
+    "setUint16",
+    "setUint32",
+    "setUint8"
+  ],
+  "Date": [
+    "now",
+    "getDay",
+    "toISOString",
+    "toJSON"
+  ],
+  "Error": [],
+  "EvalError": [],
+  "Float32Array": []
+}

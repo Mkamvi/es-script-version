@@ -1,1 +1,16 @@
-{}
+{
+  "Array": [
+    "copyWithin"
+  ],
+  "ArrayBuffer": [],
+  "AsyncFunction": [],
+  "Atomics": [],
+  "BigInt": [],
+  "BigUint64Array": [],
+  "Boolean": [],
+  "DataView": [],
+  "Date": [],
+  "Error": [],
+  "EvalError": [],
+  "Float32Array": []
+}
