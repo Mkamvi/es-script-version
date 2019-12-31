@@ -88,7 +88,14 @@ async function loadSpecificObject() {
     for (let i = 0; i < urls.length; i ++) {
       const url = urls[i];
       if (!url) continue;
-      const $ = await loadHTML(`${BASE_URL}${url}`);
+      let $ = null;
+      try {
+        $ = await loadHTML(`${BASE_URL}${url}`);
+      } catch(e) {
+        console.error(e);
+        i --;
+        continue;
+      }
       const tEle = findOlEle($, $('strong'), 'Methods', '方法');
       if (!tEle) continue;
       const navUrls = await fetchNavUrls(tEle.parent().next(), $);
@@ -102,7 +109,14 @@ async function loadSpecificObject() {
       for (let i = 0; i < navUrls.length; i ++) {
         const navUrl = navUrls[i];
         if (!navUrl) continue;
-        const specificObject = await loadHTML(`${BASE_URL}${navUrl}`);
+        let specificObject = null;
+        try {
+          specificObject = await loadHTML(`${BASE_URL}${navUrl}`);
+        } catch(e) {
+          console.error(e);
+          i --;
+          continue;
+        }
         const specificationText = specificObject('.standard-table tr').eq(2).html();
         if (!specificationText) continue;
         const methodName = navUrl.split('/').pop();
