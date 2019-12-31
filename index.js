@@ -7,14 +7,13 @@ const MDN_JS_GLOBAL_OBJECTS_URL = `${BASE_URL}/zh-CN/docs/Web/JavaScript/Referen
 
 async function loadHTML(url) {
   // 每10秒调用一次  防止被拦截
-  console.log('15s后继续...');
-  await new Promise(function(resolve) {
-    setTimeout(resolve, 15000)
-  })
+  console.log('start:loadHTML：', url);
   try {
     const res = await superagent.get(url);
+    console.log('end:loadHTML：', url);
     return cheerio.load(res.res.text);
   } catch(e) {
+    console.error(e);
     throw e;
   }
 }
@@ -27,19 +26,19 @@ async function fetchObjectUrls() {
     return new Promise(function(resolve, reject) {
       for (let i = 0; i < summaries.length; i ++) {
         if ($(summaries[i]).text() === 'Built-in objects' || $(summaries[i]).text() === '内置对象') {
-          $(summaries[i]).next().children().each(function() {
-            const _path = $(this).children('a').attr('href');
+          const liEles = $(summaries[i]).next().children().toArray();
+          for (let j = 0; j < liEles.length; j ++) {
+            const _path = $(liEles[j]).children('a').attr('href');
             urls.push(_path);
-            resolve(urls);
-          });
+          }
+          resolve(urls);
           break;
         }
       }
-      if (_path.length === 0) {
-        reject('Built-in objects Not Found !');
-      }
+      reject('Built-in objects Not Found !');
     })
   } catch(e) {
+    console.error(e);
     throw e;
   }
 }
@@ -54,14 +53,13 @@ function findOlEle($, summaries, text, textZh) {
 }
 
 async function fetchNavUrls($ol, $) {
-  return new Promise(function(resolve, rejcts) {
-    let urls = [];
-    $ol.children().each(function() {
-      const _path = $(this).children('a').attr('href');
-      urls.push(_path);
-      resolve(urls);
-    });
-  });
+  let urls = [];
+  const liEles = $ol.children().toArray();
+  for (let i = 0; i < liEles.length; i++) {
+    const _path = $(liEles[i]).children('a').attr('href');
+    urls.push(_path);
+  }
+  return Promise.resolve(urls);
 }
 
 
@@ -85,13 +83,9 @@ async function loadSpecificObject() {
     for (let i = 0; i < urls.length; i ++) {
       const url = urls[i];
       if (!url) continue;
-      console.log('加载对象URL:开始：', url);
       const $ = await loadHTML(`${BASE_URL}${url}`);
-      console.log('加载对象URL:结束：', url);
       const tEle = findOlEle($, $('strong'), 'Methods', '方法');
-      console.log('加载导航栏URL:开始：');
       const navUrls = await fetchNavUrls(tEle.parent().next(), $);
-      console.log('加载导航栏URL:结束：');
       const objectName = url.split('/').pop();
       ECMA_2015Store[objectName] = ECMA_2015Store[objectName] || [];
       ECMA_2016Store[objectName] = ECMA_2016Store[objectName] || [];
@@ -102,9 +96,7 @@ async function loadSpecificObject() {
       for (let i = 0; i < navUrls.length; i ++) {
         const navUrl = navUrls[i];
         if (!navUrl) continue;
-        console.log('加载方法URL:开始：', navUrl);
         const specificObject = await loadHTML(`${BASE_URL}${navUrl}`);
-        console.log('加载方法URL:结束：', navUrl);
         const specificationText = specificObject('.standard-table tr').eq(2).html();
         if (!specificationText) continue;
         const methodName = navUrl.split('/').pop();
