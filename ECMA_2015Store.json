@@ -50,5 +50,105 @@
   ],
   "Error": [],
   "EvalError": [],
-  "Float32Array": []
+  "Float32Array": [
+    "set",
+    "subarray"
+  ],
+  "Float64Array": [
+    "set",
+    "subarray"
+  ],
+  "Function": [
+    "bind"
+  ],
+  "Generator": [],
+  "GeneratorFunction": [
+    "bind"
+  ],
+  "Int16Array": [
+    "set",
+    "subarray"
+  ],
+  "Int32Array": [
+    "set",
+    "subarray"
+  ],
+  "Int8Array": [
+    "set",
+    "subarray"
+  ],
+  "InternalError": [],
+  "Intl": [],
+  "Collator": [],
+  "DateTimeFormat": [],
+  "ListFormat": [],
+  "Locale": [
+    "bind"
+  ],
+  "NumberFormat": [],
+  "PluralRules": [],
+  "RelativeTimeFormat": [],
+  "JSON": [
+    "parse",
+    "stringify"
+  ],
+  "Map": [],
+  "Math": [],
+  "Number": [],
+  "Object": [
+    "create",
+    "defineProperties",
+    "freeze",
+    "getOwnPropertyDescriptor",
+    "getOwnPropertyNames",
+    "GetPrototypeOf",
+    "isExtensible",
+    "isFrozen",
+    "isSealed",
+    "keys",
+    "preventExtensions",
+    "hasOwnProperty",
+    "seal"
+  ],
+  "Promise": [
+    "catch"
+  ],
+  "Proxy": [],
+  "RangeError": [],
+  "ReferenceError": [],
+  "Reflect": [],
+  "RegExp": [],
+  "Set": [],
+  "SharedArrayBuffer": [],
+  "String": [
+    "slice",
+    "Trim"
+  ],
+  "Symbol": [],
+  "SyntaxError": [],
+  "TypeError": [],
+  "TypedArray": [
+    "set",
+    "subarray"
+  ],
+  "URIError": [],
+  "Uint16Array": [
+    "set",
+    "subarray"
+  ],
+  "Uint32Array": [
+    "set",
+    "subarray"
+  ],
+  "Uint8Array": [
+    "set",
+    "subarray"
+  ],
+  "Uint8ClampedArray": [
+    "set",
+    "subarray"
+  ],
+  "WeakMap": [],
+  "WeakSet": [],
+  "WebAssembly": []
 }

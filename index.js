@@ -109,15 +109,15 @@ async function loadSpecificObject() {
       ECMA_2018Store[objectName] = ECMA_2018Store[objectName] || [];
       ECMA_2019Store[objectName] = ECMA_2019Store[objectName] || [];
       ECMA_2020Store[objectName] = ECMA_2020Store[objectName] || [];
-      for (let i = 0; i < navUrls.length; i ++) {
-        const navUrl = navUrls[i];
+      for (let ii = 0; ii < navUrls.length; ii ++) {
+        const navUrl = navUrls[ii];
         if (!navUrl) continue;
         let specificObject = null;
         try {
           specificObject = await loadHTML(`${BASE_URL}${navUrl}`);
         } catch(e) {
           console.error(e);
-          i --;
+          ii --;
           continue;
         }
         const specificationText = specificObject('.standard-table tr').eq(2).html();
