@@ -8,13 +8,16 @@ const MDN_JS_GLOBAL_OBJECTS_URL = `${BASE_URL}/zh-CN/docs/Web/JavaScript/Referen
 async function loadHTML(url) {
   // 每10秒调用一次  防止被拦截
   console.log('start:loadHTML：', url);
-  await new Promise(function(reslove) {
-    const nextWaitTime = Math.random() * 5000 + 10000;
-    console.log(nextWaitTime / 1000, 's后继续，请耐心等待');
-    setTimeout(reslove, nextWaitTime)
-  })
+  // await new Promise(function(reslove) {
+  //   const nextWaitTime = Math.random() * 5000 + 10000;
+  //   console.log(nextWaitTime / 1000, 's后继续，请耐心等待');
+  //   setTimeout(reslove, nextWaitTime)
+  // })
   try {
-    const res = await superagent.get(url);
+    const res = await superagent.get(url).timeout({
+    response: 10000,  
+    deadline: 20000,
+  });
     console.log('end:loadHTML：', url);
     return cheerio.load(res.res.text);
   } catch(e) {
@@ -141,7 +144,7 @@ async function loadSpecificObject() {
   }
 }
 
-loadSpecificObject().then(function() {
+loadSpecificObject().finally(function() {
   fs.outputJson('./ECMA_2015Store.json', ECMA_2015Store, console.error);
   fs.outputJson('./ECMA_2016Store.json', ECMA_2016Store, console.error);
   fs.outputJson('./ECMA_2017Store.json', ECMA_2017Store, console.error);
