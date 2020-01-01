@@ -1,0 +1,472 @@
+# Array
+  1. Array.from
+2. Array.of
+3. Array.copyWithin
+4. Array.entries
+5. Array.fill
+6. Array.find
+7. Array.findIndex
+8. Array.forEach
+9. Array.keys
+10. Array.values
+11. Array.@@iterator
+12. Array.@@species
+  # ArrayBuffer
+  1. ArrayBuffer.isView
+2. ArrayBuffer.slice
+  # BigUint64Array
+  1. BigUint64Array.from
+2. BigUint64Array.of
+3. BigUint64Array.copyWithin
+4. BigUint64Array.entries
+5. BigUint64Array.every
+6. BigUint64Array.fill
+7. BigUint64Array.filter
+8. BigUint64Array.find
+9. BigUint64Array.findIndex
+10. BigUint64Array.forEach
+11. BigUint64Array.indexOf
+12. BigUint64Array.join
+13. BigUint64Array.keys
+14. BigUint64Array.lastIndexOf
+15. BigUint64Array.map
+16. BigUint64Array.reduce
+17. BigUint64Array.reduceRight
+18. BigUint64Array.reverse
+19. BigUint64Array.set
+20. BigUint64Array.slice
+21. BigUint64Array.some
+22. BigUint64Array.sort
+23. BigUint64Array.subarray
+24. BigUint64Array.toLocaleString
+25. BigUint64Array.toString
+26. BigUint64Array.values
+27. BigUint64Array.@@iterator
+  # DataView
+  1. DataView.getFloat32
+2. DataView.getFloat64
+3. DataView.getInt16
+4. DataView.getInt32
+5. DataView.getInt8
+6. DataView.getUint16
+7. DataView.getUint32
+8. DataView.getUint8
+9. DataView.setFloat32
+10. DataView.setFloat64
+11. DataView.setInt16
+12. DataView.setInt32
+13. DataView.setInt8
+14. DataView.setUint16
+15. DataView.setUint32
+16. DataView.setUint8
+  # Date
+  1. Date.getDay
+2. Date.@@toPrimitive
+  # Float32Array
+  1. Float32Array.from
+2. Float32Array.of
+3. Float32Array.copyWithin
+4. Float32Array.entries
+5. Float32Array.every
+6. Float32Array.fill
+7. Float32Array.filter
+8. Float32Array.find
+9. Float32Array.findIndex
+10. Float32Array.forEach
+11. Float32Array.indexOf
+12. Float32Array.join
+13. Float32Array.keys
+14. Float32Array.lastIndexOf
+15. Float32Array.map
+16. Float32Array.reduce
+17. Float32Array.reduceRight
+18. Float32Array.reverse
+19. Float32Array.set
+20. Float32Array.slice
+21. Float32Array.some
+22. Float32Array.sort
+23. Float32Array.subarray
+24. Float32Array.toLocaleString
+25. Float32Array.toString
+26. Float32Array.values
+27. Float32Array.@@iterator
+  # Float64Array
+  1. Float64Array.from
+2. Float64Array.of
+3. Float64Array.copyWithin
+4. Float64Array.entries
+5. Float64Array.every
+6. Float64Array.fill
+7. Float64Array.filter
+8. Float64Array.find
+9. Float64Array.findIndex
+10. Float64Array.forEach
+11. Float64Array.indexOf
+12. Float64Array.join
+13. Float64Array.keys
+14. Float64Array.lastIndexOf
+15. Float64Array.map
+16. Float64Array.reduce
+17. Float64Array.reduceRight
+18. Float64Array.reverse
+19. Float64Array.set
+20. Float64Array.slice
+21. Float64Array.some
+22. Float64Array.sort
+23. Float64Array.subarray
+24. Float64Array.toLocaleString
+25. Float64Array.toString
+26. Float64Array.values
+27. Float64Array.@@iterator
+  # Generator
+  1. Generator.next
+2. Generator.return
+3. Generator.throw
+  # Int16Array
+  1. Int16Array.from
+2. Int16Array.of
+3. Int16Array.copyWithin
+4. Int16Array.entries
+5. Int16Array.every
+6. Int16Array.fill
+7. Int16Array.filter
+8. Int16Array.find
+9. Int16Array.findIndex
+10. Int16Array.forEach
+11. Int16Array.indexOf
+12. Int16Array.join
+13. Int16Array.keys
+14. Int16Array.lastIndexOf
+15. Int16Array.map
+16. Int16Array.reduce
+17. Int16Array.reduceRight
+18. Int16Array.reverse
+19. Int16Array.set
+20. Int16Array.slice
+21. Int16Array.some
+22. Int16Array.sort
+23. Int16Array.subarray
+24. Int16Array.toLocaleString
+25. Int16Array.toString
+26. Int16Array.values
+27. Int16Array.@@iterator
+  # Int32Array
+  1. Int32Array.from
+2. Int32Array.of
+3. Int32Array.copyWithin
+4. Int32Array.entries
+5. Int32Array.every
+6. Int32Array.fill
+7. Int32Array.filter
+8. Int32Array.find
+9. Int32Array.findIndex
+10. Int32Array.forEach
+11. Int32Array.indexOf
+12. Int32Array.join
+13. Int32Array.keys
+14. Int32Array.lastIndexOf
+15. Int32Array.map
+16. Int32Array.reduce
+17. Int32Array.reduceRight
+18. Int32Array.reverse
+19. Int32Array.set
+20. Int32Array.slice
+21. Int32Array.some
+22. Int32Array.sort
+23. Int32Array.subarray
+24. Int32Array.toLocaleString
+25. Int32Array.toString
+26. Int32Array.values
+27. Int32Array.@@iterator
+  # Int8Array
+  1. Int8Array.from
+2. Int8Array.of
+3. Int8Array.copyWithin
+4. Int8Array.entries
+5. Int8Array.every
+6. Int8Array.fill
+7. Int8Array.filter
+8. Int8Array.find
+9. Int8Array.findIndex
+10. Int8Array.forEach
+11. Int8Array.indexOf
+12. Int8Array.join
+13. Int8Array.keys
+14. Int8Array.lastIndexOf
+15. Int8Array.map
+16. Int8Array.reduce
+17. Int8Array.reduceRight
+18. Int8Array.reverse
+19. Int8Array.set
+20. Int8Array.slice
+21. Int8Array.some
+22. Int8Array.sort
+23. Int8Array.subarray
+24. Int8Array.toLocaleString
+25. Int8Array.toString
+26. Int8Array.values
+27. Int8Array.@@iterator
+  # Map
+  1. Map.clear
+2. Map.delete
+3. Map.forEach
+4. Map.get
+5. Map.has
+6. Map.keys
+7. Map.set
+8. Map.values
+9. Map.@@iterator
+  # Math
+  1. Math.%E5%8F%8D%E5%8F%8C%E6%9B%B2%E4%BD%99%E5%BC%A6%E5%80%BC
+2. Math.asinh
+3. Math.atanh
+4. Math.cbrt
+5. Math.clz32
+6. Math.cosh
+7. Math.expm1
+8. Math.fround
+9. Math.hypot
+10. Math.log10
+11. Math.log1p
+12. Math.log2
+13. Math.sign
+14. Math.sinh
+15. Math.tanh
+16. Math.trunc
+  # Number
+  1. Number.isFinite
+2. Number.isInteger
+3. Number.isNaN
+4. Number.isSafeInteger
+5. Number.parseFloat
+  # Object
+  1. Object.assign
+2. Object.getOwnPropertySymbols
+3. Object.is
+4. Object.hasOwnProperty
+  # Promise
+  1. Promise.all
+2. Promise.then
+3. Promise.race
+4. Promise.reject
+5. Promise.resolve
+  # Proxy
+  1. Proxy.apply
+2. Proxy.construct
+3. Proxy.defineProperty
+4. Proxy.deleteProperty
+5. Proxy.get
+6. Proxy.getOwnPropertyDescriptor
+7. Proxy.getPrototypeOf
+8. Proxy.has
+9. Proxy.isExtensible
+10. Proxy.ownKeys
+11. Proxy.preventExtensions
+12. Proxy.set
+13. Proxy.setPrototypeOf
+  # Reflect
+  1. Reflect.apply
+2. Reflect.construct
+3. Reflect.defineProperty
+4. Reflect.deleteProperty
+5. Reflect.get
+6. Reflect.getOwnPropertyDescriptor
+7. Reflect.getPrototypeOf
+8. Reflect.has
+9. Reflect.isExtensible
+10. Reflect.ownKeys
+11. Reflect.preventExtensions
+12. Reflect.set
+13. Reflect.setPrototypeOf
+  # RegExp
+  1. RegExp.compile
+2. RegExp.@@match
+3. RegExp.@@replace
+4. RegExp.@@search
+5. RegExp.@@split
+  # Set
+  1. Set.add
+2. Set.clear
+3. Set.delete
+4. Set.entries
+5. Set.forEach
+6. Set.has
+7. Set.values
+8. Set.@@iterator
+  # String
+  1. String.fromCodePoint
+2. String.anchor
+3. String.big
+4. String.blink
+5. String.bold
+6. String.codePointAt
+7. String.endsWith
+8. String.fixed
+9. String.fontcolor
+10. String.fontsize
+11. String.italics
+12. String.link
+13. String.repeat
+14. String.slice
+15. String.small
+16. String.startsWith
+17. String.strike
+18. String.sub
+19. String.sup
+20. String.raw
+  # Symbol
+  1. Symbol.for
+2. Symbol.keyFor
+3. Symbol.toString
+4. Symbol.valueOf
+5. Symbol.@@toPrimitive
+  # TypedArray
+  1. TypedArray.from
+2. TypedArray.of
+3. TypedArray.copyWithin
+4. TypedArray.entries
+5. TypedArray.every
+6. TypedArray.fill
+7. TypedArray.filter
+8. TypedArray.find
+9. TypedArray.findIndex
+10. TypedArray.forEach
+11. TypedArray.indexOf
+12. TypedArray.join
+13. TypedArray.keys
+14. TypedArray.lastIndexOf
+15. TypedArray.map
+16. TypedArray.reduce
+17. TypedArray.reduceRight
+18. TypedArray.reverse
+19. TypedArray.set
+20. TypedArray.slice
+21. TypedArray.some
+22. TypedArray.sort
+23. TypedArray.subarray
+24. TypedArray.toLocaleString
+25. TypedArray.toString
+26. TypedArray.values
+27. TypedArray.@@iterator
+  # Uint16Array
+  1. Uint16Array.from
+2. Uint16Array.of
+3. Uint16Array.copyWithin
+4. Uint16Array.entries
+5. Uint16Array.every
+6. Uint16Array.fill
+7. Uint16Array.filter
+8. Uint16Array.find
+9. Uint16Array.findIndex
+10. Uint16Array.forEach
+11. Uint16Array.indexOf
+12. Uint16Array.join
+13. Uint16Array.keys
+14. Uint16Array.lastIndexOf
+15. Uint16Array.map
+16. Uint16Array.reduce
+17. Uint16Array.reduceRight
+18. Uint16Array.reverse
+19. Uint16Array.set
+20. Uint16Array.slice
+21. Uint16Array.some
+22. Uint16Array.sort
+23. Uint16Array.subarray
+24. Uint16Array.toLocaleString
+25. Uint16Array.toString
+26. Uint16Array.values
+27. Uint16Array.@@iterator
+  # Uint32Array
+  1. Uint32Array.from
+2. Uint32Array.of
+3. Uint32Array.copyWithin
+4. Uint32Array.entries
+5. Uint32Array.every
+6. Uint32Array.fill
+7. Uint32Array.filter
+8. Uint32Array.find
+9. Uint32Array.findIndex
+10. Uint32Array.forEach
+11. Uint32Array.indexOf
+12. Uint32Array.join
+13. Uint32Array.keys
+14. Uint32Array.lastIndexOf
+15. Uint32Array.map
+16. Uint32Array.reduce
+17. Uint32Array.reduceRight
+18. Uint32Array.reverse
+19. Uint32Array.set
+20. Uint32Array.slice
+21. Uint32Array.some
+22. Uint32Array.sort
+23. Uint32Array.subarray
+24. Uint32Array.toLocaleString
+25. Uint32Array.toString
+26. Uint32Array.values
+27. Uint32Array.@@iterator
+  # Uint8Array
+  1. Uint8Array.from
+2. Uint8Array.of
+3. Uint8Array.copyWithin
+4. Uint8Array.entries
+5. Uint8Array.every
+6. Uint8Array.fill
+7. Uint8Array.filter
+8. Uint8Array.find
+9. Uint8Array.findIndex
+10. Uint8Array.forEach
+11. Uint8Array.indexOf
+12. Uint8Array.join
+13. Uint8Array.keys
+14. Uint8Array.lastIndexOf
+15. Uint8Array.map
+16. Uint8Array.reduce
+17. Uint8Array.reduceRight
+18. Uint8Array.reverse
+19. Uint8Array.set
+20. Uint8Array.slice
+21. Uint8Array.some
+22. Uint8Array.sort
+23. Uint8Array.subarray
+24. Uint8Array.toLocaleString
+25. Uint8Array.toString
+26. Uint8Array.values
+27. Uint8Array.@@iterator
+  # Uint8ClampedArray
+  1. Uint8ClampedArray.from
+2. Uint8ClampedArray.of
+3. Uint8ClampedArray.copyWithin
+4. Uint8ClampedArray.entries
+5. Uint8ClampedArray.every
+6. Uint8ClampedArray.fill
+7. Uint8ClampedArray.filter
+8. Uint8ClampedArray.find
+9. Uint8ClampedArray.findIndex
+10. Uint8ClampedArray.forEach
+11. Uint8ClampedArray.indexOf
+12. Uint8ClampedArray.join
+13. Uint8ClampedArray.keys
+14. Uint8ClampedArray.lastIndexOf
+15. Uint8ClampedArray.map
+16. Uint8ClampedArray.reduce
+17. Uint8ClampedArray.reduceRight
+18. Uint8ClampedArray.reverse
+19. Uint8ClampedArray.set
+20. Uint8ClampedArray.slice
+21. Uint8ClampedArray.some
+22. Uint8ClampedArray.sort
+23. Uint8ClampedArray.subarray
+24. Uint8ClampedArray.toLocaleString
+25. Uint8ClampedArray.toString
+26. Uint8ClampedArray.values
+27. Uint8ClampedArray.@@iterator
+  # WeakMap
+  1. WeakMap.delete
+2. WeakMap.get
+3. WeakMap.has
+4. WeakMap.set
+  # WeakSet
+  1. WeakSet.add
+2. WeakSet.delete
+3. WeakSet.has
+  
