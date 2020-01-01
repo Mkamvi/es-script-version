@@ -15,12 +15,12 @@ async function loadHTML(url) {
   // })
   try {
     const res = await superagent.get(url).timeout({
-    response: 10000,  
-    deadline: 20000,
-  });
+      response: 10000,
+      deadline: 20000,
+    });
     console.log('end:loadHTML：', url);
     return cheerio.load(res.res.text);
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     throw e;
   }
@@ -31,11 +31,11 @@ async function fetchObjectUrls() {
     const $ = await loadHTML(MDN_JS_GLOBAL_OBJECTS_URL);
     const summaries = $('summary').toArray();
     const urls = [];
-    return new Promise(function(resolve, reject) {
-      for (let i = 0; i < summaries.length; i ++) {
+    return new Promise(function (resolve, reject) {
+      for (let i = 0; i < summaries.length; i++) {
         if ($(summaries[i]).text() === 'Built-in objects' || $(summaries[i]).text() === '内置对象') {
           const liEles = $(summaries[i]).next().children().toArray();
-          for (let j = 0; j < liEles.length; j ++) {
+          for (let j = 0; j < liEles.length; j++) {
             const _path = $(liEles[j]).children('a').attr('href');
             urls.push(_path);
           }
@@ -45,17 +45,17 @@ async function fetchObjectUrls() {
       }
       reject('Built-in objects Not Found !');
     })
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     throw e;
   }
 }
 
 function findOlEle($, summaries, text, textZh) {
-  for (let i = 0; i < summaries.length; i ++) {
-        if ($(summaries[i]).text() === text || $(summaries[i]).text() === textZh) {
-          return $(summaries[i])
-        }
+  for (let i = 0; i < summaries.length; i++) {
+    if ($(summaries[i]).text() === text || $(summaries[i]).text() === textZh) {
+      return $(summaries[i])
+    }
   }
   return null;
 }
@@ -88,15 +88,15 @@ let ECMA_2020Store = {};
 async function loadSpecificObject() {
   try {
     const urls = await fetchObjectUrls();
-    for (let i = 0; i < urls.length; i ++) {
+    for (let i = 0; i < urls.length; i++) {
       const url = urls[i];
       if (!url) continue;
       let $ = null;
       try {
         $ = await loadHTML(`${BASE_URL}${url}`);
-      } catch(e) {
+      } catch (e) {
         console.error(e);
-        i --;
+        i--;
         continue;
       }
       const tEle = findOlEle($, $('strong'), 'Methods', '方法');
@@ -109,19 +109,35 @@ async function loadSpecificObject() {
       ECMA_2018Store[objectName] = ECMA_2018Store[objectName] || [];
       ECMA_2019Store[objectName] = ECMA_2019Store[objectName] || [];
       ECMA_2020Store[objectName] = ECMA_2020Store[objectName] || [];
-      for (let ii = 0; ii < navUrls.length; ii ++) {
+      for (let ii = 0; ii < navUrls.length; ii++) {
         const navUrl = navUrls[ii];
         if (!navUrl) continue;
         let specificObject = null;
         try {
           specificObject = await loadHTML(`${BASE_URL}${navUrl}`);
-        } catch(e) {
+        } catch (e) {
           console.error(e);
-          ii --;
+          ii--;
           continue;
         }
-        // Todo: 
-        const specificationText = specificObject('.standard-table tr').eq(2).html();
+        const trEls = specificObject('.standard-table tr').toArray();
+        let specificationText = '';
+        try {
+          for (let tei = 1; tei < trEls.length; tei++) {
+            const _status = $(trEls[tei]).children('td').eq(1).text();
+            if (_status === 'Draft') continue;
+            const _spec = $(trEls[tei]).children('td').eq(0).text();
+            if (_status === 'Standard') {
+              specificationText = _spec;
+              break;
+            }
+            if (!specificationText) continue;
+          }
+        } catch (e) {
+          console.error(e);
+          continue;
+        }
+
         if (!specificationText) continue;
         const methodName = navUrl.split('/').pop();
         if (specificationText.indexOf(ECMA_2015) !== -1) {
@@ -135,17 +151,16 @@ async function loadSpecificObject() {
         } else if (specificationText.indexOf(ECMA_2019) !== -1) {
           ECMA_2019Store[objectName].push(methodName);
         } else if (specificationText.indexOf(ECMA_2020) !== -1) {
-          ECMA_2020Store[objectName].push(methodName);
+          ECMA_2020Store[objectName].push(methodName); ``
         }
       }
     }
-    return true;
   } catch (e) {
     console.error(e);
   }
 }
 
-loadSpecificObject().finally(function() {
+loadSpecificObject().finally(function () {
   fs.outputJson('./ECMA_2015Store.json', ECMA_2015Store, console.error);
   fs.outputJson('./ECMA_2016Store.json', ECMA_2016Store, console.error);
   fs.outputJson('./ECMA_2017Store.json', ECMA_2017Store, console.error);

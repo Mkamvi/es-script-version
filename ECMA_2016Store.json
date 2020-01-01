@@ -1,25 +1,37 @@
 {
   "Array": [
-    "copyWithin"
+    "includes"
   ],
   "ArrayBuffer": [],
   "AsyncFunction": [],
   "Atomics": [],
   "BigInt": [],
-  "BigUint64Array": [],
+  "BigUint64Array": [
+    "includes"
+  ],
   "Boolean": [],
   "DataView": [],
   "Date": [],
   "Error": [],
   "EvalError": [],
-  "Float32Array": [],
-  "Float64Array": [],
+  "Float32Array": [
+    "includes"
+  ],
+  "Float64Array": [
+    "includes"
+  ],
   "Function": [],
   "Generator": [],
   "GeneratorFunction": [],
-  "Int16Array": [],
-  "Int32Array": [],
-  "Int8Array": [],
+  "Int16Array": [
+    "includes"
+  ],
+  "Int32Array": [
+    "includes"
+  ],
+  "Int8Array": [
+    "includes"
+  ],
   "InternalError": [],
   "Intl": [],
   "Collator": [],
@@ -46,12 +58,22 @@
   "Symbol": [],
   "SyntaxError": [],
   "TypeError": [],
-  "TypedArray": [],
+  "TypedArray": [
+    "includes"
+  ],
   "URIError": [],
-  "Uint16Array": [],
-  "Uint32Array": [],
-  "Uint8Array": [],
-  "Uint8ClampedArray": [],
+  "Uint16Array": [
+    "includes"
+  ],
+  "Uint32Array": [
+    "includes"
+  ],
+  "Uint8Array": [
+    "includes"
+  ],
+  "Uint8ClampedArray": [
+    "includes"
+  ],
   "WeakMap": [],
   "WeakSet": [],
   "WebAssembly": []
