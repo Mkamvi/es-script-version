@@ -22,7 +22,7 @@
 ### 如何使用
 
 1. 版本要求：
-  * node: > v12.6.0
+  * node:  > v12.6.0
 2. 获取代码：git clone git@github.com:iWuzhi/es-script-version.git
 3. 安装依赖：npm i
 4. 抓取原始数据：npm run fetch
