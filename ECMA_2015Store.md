@@ -11,10 +11,10 @@
 10. Array.values
 11. Array.@@iterator
 12. Array.@@species
-  # ArrayBuffer
+# ArrayBuffer
   1. ArrayBuffer.isView
 2. ArrayBuffer.slice
-  # BigUint64Array
+# BigUint64Array
   1. BigUint64Array.from
 2. BigUint64Array.of
 3. BigUint64Array.copyWithin
@@ -42,7 +42,7 @@
 25. BigUint64Array.toString
 26. BigUint64Array.values
 27. BigUint64Array.@@iterator
-  # DataView
+# DataView
   1. DataView.getFloat32
 2. DataView.getFloat64
 3. DataView.getInt16
@@ -59,10 +59,10 @@
 14. DataView.setUint16
 15. DataView.setUint32
 16. DataView.setUint8
-  # Date
+# Date
   1. Date.getDay
 2. Date.@@toPrimitive
-  # Float32Array
+# Float32Array
   1. Float32Array.from
 2. Float32Array.of
 3. Float32Array.copyWithin
@@ -90,7 +90,7 @@
 25. Float32Array.toString
 26. Float32Array.values
 27. Float32Array.@@iterator
-  # Float64Array
+# Float64Array
   1. Float64Array.from
 2. Float64Array.of
 3. Float64Array.copyWithin
@@ -118,11 +118,11 @@
 25. Float64Array.toString
 26. Float64Array.values
 27. Float64Array.@@iterator
-  # Generator
+# Generator
   1. Generator.next
 2. Generator.return
 3. Generator.throw
-  # Int16Array
+# Int16Array
   1. Int16Array.from
 2. Int16Array.of
 3. Int16Array.copyWithin
@@ -150,7 +150,7 @@
 25. Int16Array.toString
 26. Int16Array.values
 27. Int16Array.@@iterator
-  # Int32Array
+# Int32Array
   1. Int32Array.from
 2. Int32Array.of
 3. Int32Array.copyWithin
@@ -178,7 +178,7 @@
 25. Int32Array.toString
 26. Int32Array.values
 27. Int32Array.@@iterator
-  # Int8Array
+# Int8Array
   1. Int8Array.from
 2. Int8Array.of
 3. Int8Array.copyWithin
@@ -206,7 +206,7 @@
 25. Int8Array.toString
 26. Int8Array.values
 27. Int8Array.@@iterator
-  # Map
+# Map
   1. Map.clear
 2. Map.delete
 3. Map.forEach
@@ -216,7 +216,7 @@
 7. Map.set
 8. Map.values
 9. Map.@@iterator
-  # Math
+# Math
   1. Math.%E5%8F%8D%E5%8F%8C%E6%9B%B2%E4%BD%99%E5%BC%A6%E5%80%BC
 2. Math.asinh
 3. Math.atanh
@@ -233,24 +233,24 @@
 14. Math.sinh
 15. Math.tanh
 16. Math.trunc
-  # Number
+# Number
   1. Number.isFinite
 2. Number.isInteger
 3. Number.isNaN
 4. Number.isSafeInteger
 5. Number.parseFloat
-  # Object
+# Object
   1. Object.assign
 2. Object.getOwnPropertySymbols
 3. Object.is
 4. Object.hasOwnProperty
-  # Promise
+# Promise
   1. Promise.all
 2. Promise.then
 3. Promise.race
 4. Promise.reject
 5. Promise.resolve
-  # Proxy
+# Proxy
   1. Proxy.apply
 2. Proxy.construct
 3. Proxy.defineProperty
@@ -264,7 +264,7 @@
 11. Proxy.preventExtensions
 12. Proxy.set
 13. Proxy.setPrototypeOf
-  # Reflect
+# Reflect
   1. Reflect.apply
 2. Reflect.construct
 3. Reflect.defineProperty
@@ -278,13 +278,13 @@
 11. Reflect.preventExtensions
 12. Reflect.set
 13. Reflect.setPrototypeOf
-  # RegExp
+# RegExp
   1. RegExp.compile
 2. RegExp.@@match
 3. RegExp.@@replace
 4. RegExp.@@search
 5. RegExp.@@split
-  # Set
+# Set
   1. Set.add
 2. Set.clear
 3. Set.delete
@@ -293,7 +293,7 @@
 6. Set.has
 7. Set.values
 8. Set.@@iterator
-  # String
+# String
   1. String.fromCodePoint
 2. String.anchor
 3. String.big
@@ -314,13 +314,13 @@
 18. String.sub
 19. String.sup
 20. String.raw
-  # Symbol
+# Symbol
   1. Symbol.for
 2. Symbol.keyFor
 3. Symbol.toString
 4. Symbol.valueOf
 5. Symbol.@@toPrimitive
-  # TypedArray
+# TypedArray
   1. TypedArray.from
 2. TypedArray.of
 3. TypedArray.copyWithin
@@ -348,7 +348,7 @@
 25. TypedArray.toString
 26. TypedArray.values
 27. TypedArray.@@iterator
-  # Uint16Array
+# Uint16Array
   1. Uint16Array.from
 2. Uint16Array.of
 3. Uint16Array.copyWithin
@@ -376,7 +376,7 @@
 25. Uint16Array.toString
 26. Uint16Array.values
 27. Uint16Array.@@iterator
-  # Uint32Array
+# Uint32Array
   1. Uint32Array.from
 2. Uint32Array.of
 3. Uint32Array.copyWithin
@@ -404,7 +404,7 @@
 25. Uint32Array.toString
 26. Uint32Array.values
 27. Uint32Array.@@iterator
-  # Uint8Array
+# Uint8Array
   1. Uint8Array.from
 2. Uint8Array.of
 3. Uint8Array.copyWithin
@@ -432,7 +432,7 @@
 25. Uint8Array.toString
 26. Uint8Array.values
 27. Uint8Array.@@iterator
-  # Uint8ClampedArray
+# Uint8ClampedArray
   1. Uint8ClampedArray.from
 2. Uint8ClampedArray.of
 3. Uint8ClampedArray.copyWithin
@@ -460,13 +460,12 @@
 25. Uint8ClampedArray.toString
 26. Uint8ClampedArray.values
 27. Uint8ClampedArray.@@iterator
-  # WeakMap
+# WeakMap
   1. WeakMap.delete
 2. WeakMap.get
 3. WeakMap.has
 4. WeakMap.set
-  # WeakSet
+# WeakSet
   1. WeakSet.add
 2. WeakSet.delete
 3. WeakSet.has
-  

@@ -16,6 +16,7 @@
 "cheerio": "^1.0.0-rc.3",  // 像jQuery一样获取DOM元素
 "fs-extra": "^8.1.0",  // 读写文件
 "superagent": "^5.1.3"  // 用于读取网页客户端
+"nodemon": "^2.0.2"  // 方便开发环境调试
 ```
 
 ### 如何使用
@@ -24,7 +25,8 @@
   * node: > v12.6.0
 2. 获取代码：git clone git@github.com:iWuzhi/es-script-version.git
 3. 安装依赖：npm i
-4. 启动：node index
+4. 抓取原始数据：npm run fetch
+5. markdown文件生成：npm run revert
 
 ### 文件说明
 

@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js",
-    "revert": "nodemon ./revertJSONToMarkdown.js"
+    "fetch": "node ./index.js",
+    "revert": "node ./revertJSONToMarkdown.js"
   },
-  "author": "",
+  "author": "iWuzhi",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",

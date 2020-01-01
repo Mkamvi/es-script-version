@@ -29,8 +29,7 @@ function revert(jsonPath) {
 
 function moudleTemplate(title, subKeys) {
   let target = `# ${title}
-  ${subKeys.map(generateSubLine).join('\n')}
-  `;
+  ${subKeys.map(generateSubLine).join('\n')}\n`;
   function generateSubLine(subKey, index) {
     return `${index + 1}. ${title}.${subKey}`;
   }

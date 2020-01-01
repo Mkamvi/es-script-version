@@ -1,25 +1,24 @@
 # Array
   1. Array.includes
-  # BigUint64Array
+# BigUint64Array
   1. BigUint64Array.includes
-  # Float32Array
+# Float32Array
   1. Float32Array.includes
-  # Float64Array
+# Float64Array
   1. Float64Array.includes
-  # Int16Array
+# Int16Array
   1. Int16Array.includes
-  # Int32Array
+# Int32Array
   1. Int32Array.includes
-  # Int8Array
+# Int8Array
   1. Int8Array.includes
-  # TypedArray
+# TypedArray
   1. TypedArray.includes
-  # Uint16Array
+# Uint16Array
   1. Uint16Array.includes
-  # Uint32Array
+# Uint32Array
   1. Uint32Array.includes
-  # Uint8Array
+# Uint8Array
   1. Uint8Array.includes
-  # Uint8ClampedArray
+# Uint8ClampedArray
   1. Uint8ClampedArray.includes
-  
